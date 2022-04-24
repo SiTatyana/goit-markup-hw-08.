@@ -1,0 +1,49 @@
+.header{
+    display: flex;
+
+
+    &-list {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+    &-item {
+    display: flex;
+    margin-right: 30px;
+}
+
+    &-item:last-child {
+    margin-right: 0;
+}
+
+    &-contacts {
+    display: flex;
+    align-items: center;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    cursor: pointer;
+
+    color: var(--main-txt-clr);
+
+    transition: color var(--animation);
+}
+
+    &-socials-icon {
+    margin-right: 10px;
+    fill: currentColor;
+
+    transition: fill var(--animation);
+}
+
+    &-contacts:hover,
+    &-contacts:focus {
+    color: var(--accent-clr);
+}
+
+}

@@ -1,0 +1,64 @@
+@import "./team-social-icons";
+.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--secondary-bg-clr);
+
+
+&-title {
+    margin-bottom: 50px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.12;
+    text-align: center;
+
+    color: var(--secondary-txt-clr);
+}
+
+&-list {
+    display: flex;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+
+&-list:last-child {
+    margin-right: 0;
+}
+
+&-item {
+    background-color: var(--nav-bg-clr);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+&-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+&-member {
+    margin-bottom: 10px;
+
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+
+    color: var(--secondary-txt-clr);
+}
+
+&-text {
+    margin-bottom: 16px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+
+    color: var(--main-txt-clr);
+}
+}
