@@ -1,8 +1,13 @@
 .socials {
+    
     display: flex;
+    justify-content: center;
+   
+
 
 &-item:first-child {
-    margin-left: 32px;
+    @include mq(desctop){
+    margin-left: 32px;}
 }
 
 &-item {

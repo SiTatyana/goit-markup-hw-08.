@@ -8,22 +8,50 @@
 
 
     &-overlay {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/Hero/Overlay.jpg);
-
     background-size: cover;
-}
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/Hero/mobile_hero.jpg);
+    @include mq(retina){
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/Hero/2x_mobile.jpg); 
+    }
+
+    @include mq(tablet) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url(../images/Hero/tablet_hero.jpg);
+
+        @include mq(retina){
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/2x_tablet.jpg);
+        }
+    }
+
+    @include mq(desktop){
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/Overlay.jpg);
+
+        @include mq(retina){
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url(../images/Hero/2x_overlay.jpg);
+        }
+    }
+    }
 
     &-title {
     margin-bottom: 30px;
 
     font-family: inherit;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--nav-bg-clr);
+
+    @media screen and (max-width:480px){
+        font-size: 26px;
+        line-height: 1.62;
+    }
+
+    @media screen and (min-width:1200px){
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
 
     &-button {

@@ -1,0 +1,35 @@
+.menu-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    z-index: 99;
+
+    & .icon-open{
+        opacity: 1;
+        fill:rgba(33, 33, 33, 1);
+    }
+
+   & .icon-close{
+       opacity: 0;
+   }
+
+   &.is-active.icon-close{
+       opacity: 1;
+   }
+
+   &.is-active.icon-open{
+       opacity: 0;
+   }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }}
