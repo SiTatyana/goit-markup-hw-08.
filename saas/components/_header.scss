@@ -1,6 +1,8 @@
 .header{
     display: flex;
     align-items: center;
+    margin-right: auto;
+    margin-left: auto;
 
     @media screen and (min-width:768px) {
         width: 768px;
@@ -25,7 +27,7 @@
 
     @media screen and (min-width:1200px) {
         display: flex;
-        margin-left: auto;
+        margin-left: 305px;
         align-items: center;
     }
    
