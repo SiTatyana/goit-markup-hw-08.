@@ -29,7 +29,7 @@
 
     @include mq(desktop){
         display: inline-flex;
-        
+
     }
 }
 
@@ -231,4 +231,10 @@
     color: var(--accent-clr);
     fill: var(--accent-clr);
 }
+}
+
+.form{
+    @include mq(desktop){
+        display: inline-flex;
+    }
 }

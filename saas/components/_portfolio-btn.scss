@@ -1,19 +1,41 @@
 .portfolio {
     border-bottom: 1px solid #ececec;
+    width: 100%;
 }
 
 .btn-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    
+
+    @include mq(mobile){
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+
+    @include mq(tablet){
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @include mq(desktop){
+        margin-bottom: 50px;
+    }
 }
 
 .btn-item {
-    margin-right: 10px;
+    @include mq(mobile){
+        margin-right: 8px;
+        margin-bottom: 15px;
+    }
+
+    @include mq(desktop){
+    margin-right: 10px;}
 
 
 &:last-child {
     margin-right: 0;
+
 }
 }
 
