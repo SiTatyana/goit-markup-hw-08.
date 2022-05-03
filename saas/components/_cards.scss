@@ -98,6 +98,7 @@
     border-bottom: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
+
 }
 
 &-title {
@@ -121,6 +122,16 @@
     color: var(--main-txt-clr);
 }
 }
+
+.first {
+    @include mq(tablet-only) {
+        padding-top: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 56px;
+    }
+}
+
 .third {
     @include mq(desktop){
     margin-right: 0;}

@@ -43,12 +43,13 @@
     text-transform: uppercase;
     color: var(--nav-bg-clr);
 
-    @media screen and (max-width:480px){
+    @include mq(mobile){
         font-size: 26px;
         line-height: 1.62;
+        letter-spacing: 0.06em
     }
 
-    @media screen and (min-width:1200px){
+    @include mq(desktop){
         font-size: 44px;
         line-height: 1.36;
     }

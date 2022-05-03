@@ -8,6 +8,10 @@ body {
     color: var(--main-txt-clr);
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 .section {
     @include mq(mobile-only){
         padding-top: 60px;

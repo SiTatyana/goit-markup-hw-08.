@@ -1,15 +1,19 @@
 .mobile-overlay{
     position: fixed;
-    
     top: 0;
     left: 0;
+
+    min-width: 320px;
     width: 100vw;
     height: 100vh;
+    z-index: 20;
+
     pointer-events: none;
     visibility: hidden;
     background-color: #FFFFFF;
-    z-index: 10;
-    @media screen and (min-widh: 450px) and (max-width: 767px) {
+    
+    @include mq(tablet-only) {
+    background-color: #FFFFFF;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
     0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -21,23 +25,34 @@
 }
 
     .mobile-menu{
+        margin: 0;
+        padding: 48px 40px;
         width: 100%;
         height: 100%;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        padding-left: 40px;
+        background-color: #ffffff;
+
+        @include mq(tablet-only){
+            width: 480px;
+        }
     }
   
     .mobile-nav{
-        margin-bottom: 302px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    .mobile-nav-list {
-        margin-bottom: 32px;
 
-    &:last-child{
-        margin-bottom: 0;
-    } }
+    .mobile-nav-item{
+        margin-bottom: 32px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
 
 
     .mobile-nav-link{
@@ -51,48 +66,51 @@
     &:hover {
         color: #2196F3;
     }
-
-    &:last-child {
-        margin-bottom: 306px;
     }
-}
 
-.mobile-contacts{
+.mobile-contacts-list{
     margin-bottom: 64px;
-
-
-&-tel{
-margin-bottom: 32px;
-
-font-weight: 500;
-font-size: 34px;
-line-height: 1.18;
-
-color: var(--accent-clr);
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
-&-email{
-font-weight: 500;
-font-size: 24px;
-letter-spacing: 1.17;
+    .mobile-contacts-tel{
+    margin-bottom: 32px;
+    font-size: 24px;
+    line-height: 1.67;
+    color:var(--accent-clr);
+        
+        @include mq(mobile) {
+        font-size: 34px;
+        }
+    }
 
-color:rgba(117, 117, 117, 1);;
+    .mobile-contacts-email{
+    
+    font-size: 24px;
+    line-height: 1.17;
+    color:rgba(117, 117, 117, 1);;
 
-}}
+    }
 
 .mobile-socials-list{
 display: flex;
-margin-right: 0;
+flex-wrap: wrap;
+align-items: center;
 }
 
 .mobile-socials-item{
     padding: 10px;
 
-    font-size: 18px;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.22;
     
     border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    @media screen and (min-width:480px) {
+        font-size: 18px;
+    }
 
     &:last-child {
         border-right: none;
